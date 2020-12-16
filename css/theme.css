@@ -2232,12 +2232,12 @@ textarea.form-control {
       -webkit-transition: none;
       transition: none; } }
   .btn:hover {
-    color: #6d768b;
+    color: #a47900;
     text-decoration: none; }
   .btn:focus, .btn.focus {
     outline: 0;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(85, 51, 255, 0.25);
-            box-shadow: 0 0 0 0.2rem rgba(85, 51, 255, 0.25); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(215, 158, 0, 0.25);
+            box-shadow: 0 0 0 0.2rem rgba(215, 158, 0, 0.25); }
   .btn.disabled, .btn:disabled {
     opacity: 0.65; }
 
@@ -11670,8 +11670,8 @@ button:focus {
 
 .btn-primary:hover,
 .btn-outline-primary:hover {
-  -webkit-box-shadow: 0 1px 10px rgba(85, 51, 255, 0.4) !important;
-          box-shadow: 0 1px 10px rgba(85, 51, 255, 0.4) !important; }
+  -webkit-box-shadow: 0 1px 10px rgba(201, 153, 62, 0.4) !important;
+          box-shadow: 0 1px 10px rgba(201, 153, 62, 0.4) !important; }
 
 .btn-secondary:hover,
 .btn-outline-secondary:hover {
@@ -16329,6 +16329,9 @@ h1, h2, h3, h4, h5, h6,
 .display-4 {
   font-size: 3.5rem !important; }
 
+.display-5 {
+  font-size: 2rem !important; } 
+
 @media (min-width: 576px) {
   .display-sm-1 {
     font-size: 6rem !important; }
@@ -16337,7 +16340,9 @@ h1, h2, h3, h4, h5, h6,
   .display-sm-3 {
     font-size: 4.5rem !important; }
   .display-sm-4 {
-    font-size: 3.5rem !important; } }
+    font-size: 2.5rem !important; }
+  } 
+
 
 @media (min-width: 768px) {
   .display-md-1 {
@@ -16347,7 +16352,7 @@ h1, h2, h3, h4, h5, h6,
   .display-md-3 {
     font-size: 4.5rem !important; }
   .display-md-4 {
-    font-size: 3.5rem !important; } }
+    font-size: 3rem !important; } }
 
 @media (min-width: 992px) {
   .display-lg-1 {
