@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&  !empty($_POST['Contact'])) {
 
         // Your e-mail address here.
         // This is where you're going to receive messages sent through the page
-        $to = 'your@email.here';
+        $to = 'dominiccevans@gmail.com';
 
         // From
         $headers = "From: {$model->email}";
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&  !empty($_POST['Contact'])) {
         $body = "\n\nEmail: {$model->email}\nSubject:{$model->subject}\n\n\n{$model->message}";
 
         // Send mail
-        // mail($to, $subject, $body, $headers);
+        mail($to, $subject, $body, $headers);
 
         // Results
         echo json_encode([
