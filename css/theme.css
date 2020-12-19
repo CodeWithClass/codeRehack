@@ -3913,7 +3913,15 @@ input[type="button"].btn-block {
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
-
+  
+  @media (max-width: 768px) {
+    .logo{
+      width: 100px;
+    }
+    .gs-button{
+      border: 1px solid #ffbc00 !important;
+    }
+  }
 .navbar-nav {
   display: -webkit-box;
   display: -ms-flexbox;
