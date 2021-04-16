@@ -1,0 +1,108 @@
+[debug] [2021-04-16T17:53:06.103Z] ----------------------------------------------------------------------
+[debug] [2021-04-16T17:53:06.105Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2021-04-16T17:53:06.105Z] CLI Version:   9.4.0
+[debug] [2021-04-16T17:53:06.105Z] Platform:      darwin
+[debug] [2021-04-16T17:53:06.105Z] Node Version:  v10.23.3
+[debug] [2021-04-16T17:53:06.107Z] Time:          Fri Apr 16 2021 13:53:06 GMT-0400 (Atlantic Standard Time)
+[debug] [2021-04-16T17:53:06.107Z] ----------------------------------------------------------------------
+[debug] [2021-04-16T17:53:06.107Z] 
+[debug] [2021-04-16T17:53:06.116Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-16T17:53:06.122Z] > authorizing via signed-in user
+[debug] [2021-04-16T17:53:06.122Z] [iam] checking project coderehack-dotcom for permissions ["firebase.projects.get"]
+[debug] [2021-04-16T17:53:06.126Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/coderehack-dotcom:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-04-16T17:53:06.514Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 16 Apr 2021 17:53:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=32","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-16T17:53:06.517Z] > refreshing access token with scopes: []
+[debug] [2021-04-16T17:53:06.517Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-16T17:53:06.861Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 16 Apr 2021 17:53:06 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-16T17:53:06.886Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom [none]
+[debug] [2021-04-16T17:53:07.372Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom 200
+[debug] [2021-04-16T17:53:07.372Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom {"projectId":"coderehack-dotcom","projectNumber":"183140649934","displayName":"codeRehack-dotcom","name":"projects/coderehack-dotcom","resources":{"hostingSite":"coderehack-dotcom"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from '/Users/dominicevans/Code_Repos/CodeRehack/codeRehack'...
+[info] 
+[debug] [2021-04-16T17:53:07.382Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom/webApps/-/config [none]
+[debug] [2021-04-16T17:53:07.701Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received type undefined
+    at validateString (internal/validators.js:125:11)
+    at Object.join (path.js:1147:7)
+    at FunctionsServer.start (/usr/local/lib/node_modules/firebase-tools/lib/serve/functions.js:20:35)
+    at Promise.all._.map (/usr/local/lib/node_modules/firebase-tools/lib/serve/index.js:15:36)
+    at arrayMap (/usr/local/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:653:23)
+    at Function.map (/usr/local/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9622:14)
+    at serve (/usr/local/lib/node_modules/firebase-tools/lib/serve/index.js:14:25)
+    at Command.module.exports.Command.description.option.option.option.option.before.action [as actionFn] (/usr/local/lib/node_modules/firebase-tools/lib/commands/serve.js:59:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/command.js:163:25
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-04-16T17:54:23.885Z] ----------------------------------------------------------------------
+[debug] [2021-04-16T17:54:23.887Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2021-04-16T17:54:23.888Z] CLI Version:   9.4.0
+[debug] [2021-04-16T17:54:23.888Z] Platform:      darwin
+[debug] [2021-04-16T17:54:23.888Z] Node Version:  v10.23.3
+[debug] [2021-04-16T17:54:23.889Z] Time:          Fri Apr 16 2021 13:54:23 GMT-0400 (Atlantic Standard Time)
+[debug] [2021-04-16T17:54:23.889Z] ----------------------------------------------------------------------
+[debug] [2021-04-16T17:54:23.889Z] 
+[debug] [2021-04-16T17:54:23.897Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-16T17:54:23.897Z] > authorizing via signed-in user
+[debug] [2021-04-16T17:54:23.898Z] [iam] checking project coderehack-dotcom for permissions ["firebase.projects.get"]
+[debug] [2021-04-16T17:54:23.900Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-16T17:54:23.900Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-16T17:54:24.257Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 16 Apr 2021 17:54:24 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-16T17:54:24.286Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/coderehack-dotcom:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-04-16T17:54:24.635Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 16 Apr 2021 17:54:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=28","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-16T17:54:24.637Z] > refreshing access token with scopes: []
+[debug] [2021-04-16T17:54:24.637Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-16T17:54:24.935Z] <<< HTTP RESPONSE 200 {"date":"Fri, 16 Apr 2021 17:54:24 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-16T17:54:24.963Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom [none]
+[debug] [2021-04-16T17:54:25.465Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom 200
+[debug] [2021-04-16T17:54:25.465Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom {"projectId":"coderehack-dotcom","projectNumber":"183140649934","displayName":"codeRehack-dotcom","name":"projects/coderehack-dotcom","resources":{"hostingSite":"coderehack-dotcom"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from '/Users/dominicevans/Code_Repos/CodeRehack/codeRehack'...
+[info] 
+[debug] [2021-04-16T17:54:25.469Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom/webApps/-/config [none]
+[warn] ⚠  Your requested "node" version "12" doesn't match your global version "10" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"12\" doesn't match your global version \"10\""}}
+[debug] [2021-04-16T17:54:25.480Z] defaultcredentials: writing to file /Users/dominicevans/.config/firebase/coderehack_gmail_com_application_default_credentials.json
+[debug] [2021-04-16T17:54:25.482Z] Setting GAC to /Users/dominicevans/.config/firebase/coderehack_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/dominicevans/.config/firebase/coderehack_gmail_com_application_default_credentials.json"}}
+[debug] [2021-04-16T17:54:25.482Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom/adminSdkConfig [none]
+[debug] [2021-04-16T17:54:25.918Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom/adminSdkConfig 200
+[debug] [2021-04-16T17:54:25.918Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom/adminSdkConfig {"projectId":"coderehack-dotcom","storageBucket":"coderehack-dotcom.appspot.com"}
+[debug] [2021-04-16T17:54:25.992Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom/webApps/-/config 200
+[debug] [2021-04-16T17:54:25.992Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/coderehack-dotcom/webApps/-/config {"projectId":"coderehack-dotcom","storageBucket":"coderehack-dotcom.appspot.com","apiKey":"AIzaSyCdB-SIEmiorFW-bwr_h18-fKttRGFLBpY","authDomain":"coderehack-dotcom.firebaseapp.com","messagingSenderId":"183140649934"}
+[info] i  functions: Watching "/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions\" for Cloud Functions..."}}
+[debug] [2021-04-16T17:54:26.040Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2021-04-16T17:54:26.040Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2021-04-16T17:54:26.040Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2021-04-16T17:54:26.041Z] [worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: Assigning socketPath: /var/folders/l8/7jlvsry134g3sc005yx1n6n40000gp/T/fire_emu_93379.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: Assigning socketPath: /var/folders/l8/7jlvsry134g3sc005yx1n6n40000gp/T/fire_emu_93379.sock"}}
+[debug] [2021-04-16T17:54:26.042Z] [worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: BUSY"}}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2021-04-16T17:54:26.218Z] [runtime-status] [93379] Functions runtime initialized. {"cwd":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions","node_version":"10.23.3"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Functions runtime initialized. {\"cwd\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions\",\"node_version\":\"10.23.3\"}"}}
+[debug] [2021-04-16T17:54:26.219Z] [runtime-status] [93379] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Disabled runtime features: undefined"}}
+[debug] [2021-04-16T17:54:26.222Z] [runtime-status] [93379] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.6.0","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.6.0\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2021-04-16T17:54:26.223Z] [runtime-status] [93379] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-04-16T17:54:26.224Z] [runtime-status] [93379] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-04-16T17:54:26.227Z] [runtime-status] [93379] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2021-04-16T17:54:26.228Z] [runtime-status] [93379] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-04-16T17:54:26.261Z] [runtime-status] [93379] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Checked functions.config() {\"config\":{}}"}}
+[debug] [2021-04-16T17:54:26.262Z] [runtime-status] [93379] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2021-04-16T17:54:26.262Z] [runtime-status] [93379] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-04-16T17:54:26.263Z] [runtime-status] [93379] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.6.0","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.6.0\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2021-04-16T17:54:26.263Z] [runtime-status] [93379] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.13.2","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.13.2\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2021-04-16T17:54:26.263Z] [runtime-status] [93379] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.6.0","resolution":"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [93379] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"9.6.0\",\"resolution\":\"/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[warn] ⚠  Error: Cannot find module '/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at initializeRuntime (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:678:29)
+    at process._tickCallback (internal/process/next_tick.js:68:7) {"metadata":{"emulator":{"name":"functions"},"message":"Error: Cannot find module '/Users/dominicevans/Code_Repos/CodeRehack/codeRehack/functions'\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:562:25)\n    at Module.require (internal/modules/cjs/loader.js:692:17)\n    at require (internal/modules/cjs/helpers.js:25:18)\n    at initializeRuntime (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:678:29)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"}}
+[warn] ⚠  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this. {"metadata":{"emulator":{"name":"functions"}}}
+[debug] [2021-04-16T17:54:26.282Z] [worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: exited"}}
+[debug] [2021-04-16T17:54:26.282Z] [worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-ed332a90-9f8e-45c8-acba-524c2591b55e]: FINISHED"}}
