@@ -6,6 +6,7 @@ const mailtrap = require("../mailtrap");
 var transport = nodemailer.createTransport(mailtrap);
 
 const prepareEmail = ({ data, templateFile, setMailOptions }) => {
+	console.log({ ...data });
 	return new Promise((resolve, reject) => {
 		fs.readFile(__dirname + "/emailTemplates/" + templateFile, (err, html) => {
 			if (err) reject(err);
@@ -16,6 +17,7 @@ const prepareEmail = ({ data, templateFile, setMailOptions }) => {
 			const htmlOutput = mjml2html(mjml);
 			const mailOptions = setMailOptions(data, htmlOutput.html);
 			resolve(sendEmail(mailOptions));
+			resolve();
 		});
 	});
 };

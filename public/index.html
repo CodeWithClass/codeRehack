@@ -414,6 +414,8 @@
                     </div>
                 </div>
             </div>
+            <button onclick="call()" type="button" class="btn btn-secondary btn-rounded"
+                data-dismiss="modal">test</button>
         </footer>
 
         <!-- Modal -->
@@ -428,23 +430,21 @@
                         </button>
                     </div>
 
-                    <form action="srv/contact.php" method="post" class="form form-contact" name="form-contact"
-                        data-response-message-animation="slide-in-up">
+                    <form onsubmit="call()" method="post" id="contact-form" class="form form-contact"
+                        name="form-contact" data-response-message-animation="slide-in-up">
                         <div class="modal-body">
                             <div class="bg-contrast p-4 rounded">
                                 <div class="form-group"><label for="contact_email" class="bold mb-0">Email
                                         address</label> <small id="emailHelp"
                                         class="form-text text-secondary mt-0 mb-2 italic">We'll never share your email
-                                        with anyone else.</small> <input type="email" name="Contact[email]"
-                                        id="contact_email" class="form-control bg-contrast" placeholder="Valid Email"
-                                        required></div>
+                                        with anyone else.</small> <input type="email" name="email" id="contact_email"
+                                        class="form-control bg-contrast" placeholder="Valid Email" required></div>
                                 <div class="form-group"><label for="contact_email" class="bold">Subject</label> <input
-                                        type="text" name="Contact[subject]" id="contact_subject"
-                                        class="form-control bg-contrast" placeholder="Subject" required></div>
+                                        type="text" name="subject" id="contact_subject" class="form-control bg-contrast"
+                                        placeholder="Subject" required></div>
                                 <div class="form-group"><label for="contact_email" class="bold">Message</label>
-                                    <textarea name="Contact[message]" id="contact_message"
-                                        class="form-control bg-contrast" placeholder="What do you want to let us know?"
-                                        rows="8" required></textarea>
+                                    <textarea name="message" id="contact_message" class="form-control bg-contrast"
+                                        placeholder="What do you want to let us know?" rows="8" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -467,13 +467,6 @@
                 </div>
             </div>
     </main><!-- themeforest:js -->
-    <script src="js/01.cookie-consent-util.js"></script>
-    <script src="js/02.1.cookie-consent-themes.js"></script>
-    <script src="js/02.2.cookie-consent-custom-css.js"></script>
-    <script src="js/02.3.cookie-consent-informational.js"></script>
-    <script src="js/02.4.cookie-consent-opt-out.js"></script>
-    <script src="js/02.5.cookie-consent-opt-in.js"></script>
-    <script src="js/02.6.cookie-consent-location.js"></script>
     <script src="js/card.js"></script>
     <script src="js/counterup2.js"></script>
     <script src="js/index.js"></script>
@@ -503,7 +496,11 @@
     <script src="js/shop.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/site.js"></script>
-    <script src="js/03.demo.js"></script><!-- endinject -->
+    <script src="js/03.demo.js"></script>
+    <script src="js/contact_form.js"></script>
+
+
+    <!-- endinject -->
 
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

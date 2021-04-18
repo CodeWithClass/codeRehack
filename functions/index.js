@@ -4,19 +4,22 @@ const express = require("express");
 const contactUs = express();
 contactUs.use(express.json());
 const prepareEmail = require("./emails/index.js");
-const { newCRmessage, newDEmessage } = require("./emails/newMessage");
+// const { newCRmessage, newDEmessage } = require("./emails/newMessage");
+const { newCRmessage } = require("./emails/newMessage");
 
-contactUs.get("/contact_codeRehack", async (_req, res) => {
+contactUs.post("/contact_codeRehack", async (req, res) => {
+	const data = JSON.parse(req.body);
+
 	prepareEmail({
-		data: {},
+		data: data,
 		templateFile: "newCRmessage.mjml",
 		setMailOptions: newCRmessage,
 	})
-		.then((_res) => {
-			res.json({ res: "sent" });
+		.then(() => {
+			res.json({ success: true });
 		})
 		.catch((_err) => {
-			res.status(500).send({ res: _err });
+			res.status(500).send({ success: false, err: _err });
 		});
 });
 

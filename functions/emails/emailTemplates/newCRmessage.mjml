@@ -108,10 +108,10 @@
 					padding="0px 25px 0px 25px"
 				>
 					<h3 style="text-align: center; color: #333333; line-height: 32px">
-						Hi CodeRehack admin, theres a new message for you from {{sender}}.
+						Hi CodeRehack admin, theres a new message for you from {{email}}.
 					</h3>
 					<p>
-						<strong>Sender email: {{sender_email}}</strong>
+						<strong>Sender email: {{email}}</strong>
 					</p>
 					<p>
 						<strong>Subject: {{subject}}</strong>
