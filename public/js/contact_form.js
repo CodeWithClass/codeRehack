@@ -1,5 +1,8 @@
-function call() {
-	let data = getFormData($("#contact-form"));
+function sendMsg() {
+	const data = getFormData($("#contact-form"));
+
+	$("#loading-message").removeClass("d-none");
+	$("#contact-form").addClass("d-none");
 
 	const url =
 		"http://localhost:5001/coderehack-dotcom/us-central1/contactUs/contact_codeRehack";
@@ -7,15 +10,20 @@ function call() {
 		method: "POST",
 		body: JSON.stringify(data),
 	})
-		.then(
-			(response) => response.text() // .json(), etc.
-		)
-		.then((res) => console.log(res));
+		.then((_res) => {
+			$("#loading-message").addClass("d-none");
+			$("#response-message").removeClass("d-none");
+		})
+		.catch((_e) => {
+			$("#loading-message").addClass("d-none");
+			$("#contact-form").removeClass("d-none");
+			$("#error-message").removeClass("d-none");
+		});
 }
 
 function getFormData($form) {
-	var unindexed_array = $form.serializeArray();
-	var indexed_array = {};
+	const unindexed_array = $form.serializeArray();
+	let indexed_array = {};
 
 	$.map(unindexed_array, function (n, i) {
 		indexed_array[n["name"]] = n["value"];

@@ -106,7 +106,8 @@
                     <div class="col-lg-4">
                         <h2 class="bold">Start the right way<br><span class="light">Start with CodeRehack</span></h2>
                         <p class="lead text-secondary">Ready to make that idea a reality? Let's get started in 4 easy
-                            steps.</p><a href="pricing.html" class="btn btn-primary btn-rounded mt-4">Get Started <i
+                            steps.</p><a href="#" data-toggle="modal" data-target="#exampleModal"
+                            class="btn btn-primary btn-rounded mt-4">Get Started <i
                                 class="ml-3 fas fa-long-arrow-alt-right"></i></a>
                         <ol id="sw-nav-tools" class="nav nav-process nav-circle nav-justified mt-5">
                             <li class="nav-item active"><a class="nav-link" href="#" data-step="1"><small
@@ -301,15 +302,7 @@
 
         <!-- ./Brands -->
         <section class="section bg-light">
-            <!-- <div class="container pb-0">
-                <h4 class="bold text-center mb-5 text-secondary">They trust us</h4>
-                <div class="row gap-y">
-                    <div class="col-md-3 col-xs-4 col-6 px-md-5"><img src="img/logos/1.png" alt="" class="img-responsive mx-auto op-7" style="max-height: 60px;"></div>
-                    <div class="col-md-3 col-xs-4 col-6 px-md-5"><img src="img/logos/2.png" alt="" class="img-responsive mx-auto op-7" style="max-height: 60px;"></div>
-                    <div class="col-md-3 col-xs-4 col-6 px-md-5"><img src="img/logos/3.png" alt="" class="img-responsive mx-auto op-7" style="max-height: 60px;"></div>
-                    <div class="col-md-3 col-xs-4 col-6 px-md-5"><img src="img/logos/4.png" alt="" class="img-responsive mx-auto op-7" style="max-height: 60px;"></div>
-                </div>
-            </div> -->
+
         </section><!-- ./FAQs -->
         <section class="section bg-light edge bottom-right">
             <div class="container">
@@ -387,15 +380,21 @@
                     </div>
                     <!-- <div class="col-md-2">
                         <h6 class="py-2 bold">Company</h6>
-                        <nav class="nav flex-column"><a class="nav-item py-2" href="about.html">About</a> <a class="nav-item py-2" href="#">Services</a> <a class="nav-item py-2" href="blog/blog-grid.html">Blog</a></nav>
+                        <nav class="nav flex-column"><a class="nav-item py-2" href="about.html">About</a> <a
+                                class="nav-item py-2" href="#">Services</a> <a class="nav-item py-2"
+                                href="blog/blog-grid.html">Blog</a></nav>
                     </div>
                     <div class="col-md-2">
                         <h6 class="py-2 bold">Product</h6>
-                        <nav class="nav flex-column"><a class="nav-item py-2" href="#">Features</a> <a class="nav-item py-2" href="#">API</a> <a class="nav-item py-2" href="#">Customers</a></nav>
+                        <nav class="nav flex-column"><a class="nav-item py-2" href="#">Features</a> <a
+                                class="nav-item py-2" href="#">API</a> <a class="nav-item py-2" href="#">Customers</a>
+                        </nav>
                     </div>
                     <div class="col-md-2">
                         <h6 class="py-2 bold">Channels</h6>
-                        <nav class="nav flex-column"><a class="nav-item py-2" href="#">Careers</a> <a class="nav-item py-2" href="#">Contact</a> <a class="nav-item py-2" href="#">Search</a></nav>
+                        <nav class="nav flex-column"><a class="nav-item py-2" href="#">Careers</a> <a
+                                class="nav-item py-2" href="#">Contact</a> <a class="nav-item py-2" href="#">Search</a>
+                        </nav>
                     </div> -->
                 </div>
                 <hr class="mt-5">
@@ -414,15 +413,13 @@
                     </div>
                 </div>
             </div>
-            <button onclick="call()" type="button" class="btn btn-secondary btn-rounded"
-                data-dismiss="modal">test</button>
         </footer>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                <div class="modal-content" style="min-height: 400px;">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Contact us</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -430,7 +427,7 @@
                         </button>
                     </div>
 
-                    <form onsubmit="call()" method="post" id="contact-form" class="form form-contact"
+                    <form onsubmit="sendMsg()" method="post" id="contact-form" class="form form-contact"
                         name="form-contact" data-response-message-animation="slide-in-up">
                         <div class="modal-body">
                             <div class="bg-contrast p-4 rounded">
@@ -458,20 +455,34 @@
                         </div>
                     </form>
 
-                    <div class="response-message mx-auto p-5">
-                        <div class="section-heading"><i class="fas fa-check font-lg"></i>
+                    <div id="response-message" class="mx-auto p-5 d-none">
+                        <div class="section-heading">
                             <p class="font-md m-0">Thank you!</p>
                             <p class="response">Your message has been sent, we will contact you as soon as possible.</p>
                         </div>
                     </div>
+
+                    <div id="loading-message" class="mx-auto p-5 d-none">
+                        <div class="section-heading"></i>
+                            <p class="font-md m-0">Sending...</p>
+                            <p class="response">Just a momment.</p>
+
+                        </div>
+                    </div>
+
+                    <div id="error-message" class="mx-auto p-5 d-none">
+                        <div class="section-heading"></i>
+                            <p class="response text-danger">A strange error has been encountered. Try again or email us
+                                directly at
+                                info@codeRehack.com</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-    </main><!-- themeforest:js -->
+    </main>
     <script src="js/card.js"></script>
     <script src="js/counterup2.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/noframework.waypoints.js"></script>
-    <script src="js/odometer.min.js"></script>
     <script src="js/prism.js"></script>
     <script src="js/simplebar.js"></script>
     <script src="js/swiper.js"></script>
@@ -479,30 +490,16 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.validate.js"></script>
-    <script src="js/jquery.smartWizard.js"></script>
     <script src="js/plugins/jquery.animatebar.js"></script>
     <script src="js/feather.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/typed.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/cookieconsent.min.js"></script>
     <script src="js/common-script.js"></script>
     <script src="js/forms.js"></script>
-    <script src="js/stripe-bubbles.js"></script>
-    <script src="js/stripe-menu.js"></script>
-    <script src="js/cc.js"></script>
-    <script src="js/pricing.js"></script>
-    <script src="js/shop.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/site.js"></script>
-    <script src="js/03.demo.js"></script>
     <script src="js/contact_form.js"></script>
-
-
-    <!-- endinject -->
-
-
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </body>
