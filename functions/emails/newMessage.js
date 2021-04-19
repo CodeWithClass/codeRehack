@@ -1,8 +1,8 @@
-const newCRmessage = (data, html_) => {
+const newCRmessage = (_data, html_) => {
 	const mailOptions = {
 		from: "noreply@codeRehack.com",
 		to: "dominiccevans@gmail.com",
-		subject: "New Message",
+		subject: "New codeRehack Message",
 		text: "Theres a new msg waiting",
 		html: html_,
 	};
@@ -10,12 +10,12 @@ const newCRmessage = (data, html_) => {
 	return mailOptions;
 };
 
-const newDEmessage = (data, html_) => {
+const newDEmessage = (_data, html_) => {
 	const mailOptions = {
 		from: "noreply@aspireForChange.app",
-		to: data.user.email,
-		subject: "New Prayer!",
-		text: "Theres a new prayer waiting for you :)",
+		to: "dominiccevans@gmail.com",
+		subject: "New dominiccevans.dev Message",
+		text: "Theres a new msg waiting",
 		html: html_,
 	};
 

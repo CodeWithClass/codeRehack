@@ -6,7 +6,6 @@ const mailtrap = require("../mailtrap");
 var transport = nodemailer.createTransport(mailtrap);
 
 const prepareEmail = ({ data, templateFile, setMailOptions }) => {
-	console.log({ ...data });
 	return new Promise((resolve, reject) => {
 		fs.readFile(__dirname + "/emailTemplates/" + templateFile, (err, html) => {
 			if (err) reject(err);

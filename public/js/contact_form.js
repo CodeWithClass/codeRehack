@@ -5,7 +5,7 @@ function sendMsg() {
 	$("#contact-form").addClass("d-none");
 
 	const url =
-		"http://localhost:5001/coderehack-dotcom/us-central1/contactUs/contact_codeRehack";
+		"https://us-central1-coderehack-dotcom.cloudfunctions.net/contactUs/contact_codeRehack";
 	fetch(url, {
 		method: "POST",
 		body: JSON.stringify(data),
